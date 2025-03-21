@@ -1,0 +1,33 @@
+---
+title: "XXXXX"
+author: "Mine Dogucu <br> University of California Irvine"
+date: "XXXXX"
+subtitle: "Talk at XXXX"
+footer: "mdogucu.github.io/XXXX"
+format: 
+  revealjs:
+    slide-number: true
+    incremental: true
+    theme: ["style.scss"]
+---
+
+## Slides
+
+## QUESTIONS?
+
+<hr>
+
+{{< fa link >}} Slides at [mdogucu.github.io/XXXX](https://mdogucu.github.io/XXXX).
+
+{{< fa brands github >}} Source code for slides at [github.com/mdogucu/XXXX](https://github.com/mdogucu/XXXX).
+
+<hr>
+
+{{< fa link >}} <a href = "http://minedogucu.com">minedogucu.com</a>  
+{{< fa brands github >}}  <a href = "http://github.com/mdogucu">mdogucu</a>   
+{{< fa brands mastodon >}} <a href = "https://mastodon.social/@MineDogucu">mastodon.social/@MineDogucu</a>  
+{{< fa brands bluesky >}} <a href = "https://bsky.app/profile/minedogucu.com">bsky.app/profile/minedogucu.com</a>  
+{{< fa brands linkedin >}} <a href = "https://www.linkedin.com/in/minedogucu/">minedogucu</a> 
+
+::: footer
+:::
