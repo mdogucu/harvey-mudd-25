@@ -1,9 +1,9 @@
 ---
-title: "XXXXX"
+title: "The Good, The Bad, and The Ugly Ways of Representing Data"
 author: "Mine Dogucu <br> University of California Irvine"
-date: "XXXXX"
-subtitle: "Talk at XXXX"
-footer: "mdogucu.github.io/XXXX"
+date: "03-29-2025"
+subtitle: "Talk at Harvey Mudd College"
+footer: "mdogucu.github.io/harvey-mudd-25"
 format: 
   revealjs:
     slide-number: true
@@ -17,9 +17,9 @@ format:
 
 <hr>
 
-{{< fa link >}} Slides at [mdogucu.github.io/XXXX](https://mdogucu.github.io/XXXX).
+{{< fa link >}} Slides at [mdogucu.github.io/harvey-mudd-25](https://mdogucu.github.io/harvey-mudd-25).
 
-{{< fa brands github >}} Source code for slides at [github.com/mdogucu/XXXX](https://github.com/mdogucu/XXXX).
+{{< fa brands github >}} Source code for slides at [github.com/mdogucu/harvey-mudd-25](https://github.com/mdogucu/harvey-mudd-25).
 
 <hr>
 
