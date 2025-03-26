@@ -11,7 +11,173 @@ format:
     theme: ["style.scss"]
 ---
 
-## Slides
+## Questions for the day 
+
+<br>
+
+Q1. What is data representation?
+<br>
+<br>
+Q2. How does one make good data visualizations? (and how does one avoid making bad or ugly data visualizations)
+
+# Q1. What is data representation?
+
+##
+
+```{r}
+#| fig-align: center
+#| fig-cap: NYT What's Going on In This Graph? [Image source](https://www.nytimes.com/2025/02/27/learning/whats-going-on-in-this-graph-march-5-2025.html)
+knitr::include_graphics("img/nyt.png")
+```
+
+## 
+
+```{r}
+#| fig-align: center
+#| fig-cap: Assessed value of household and kitchen furniture owned by Black people in Georgia. Image from the book cover. 
+knitr::include_graphics("img/dubois.png")
+```
+
+
+##
+
+
+```{r}
+#| fig-align: center
+#| fig-cap: 20th century navigational chart from Kwajalein Attoll, Marshall Islands, Micronesia on display at Bower Museum in Santa Ana. Photo by Mine Dogucu.
+knitr::include_graphics("img/navy-chart.jpg")
+```
+
+
+## 
+
+```{r}
+#| fig-align: center
+#| fig-cap: Visualization by Mona Chalabi. [Image source](https://artsandculture.google.com/asset/years-with-a-female-head-of-state-mona-chalabi/TgEsPdWevaDz0A?hl=en)
+knitr::include_graphics("img/mona-chalabi.png")
+```
+
+
+## {background-image="img/stars.jpg" background-opacity="0.2"}
+
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/128869920&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/nprscience" title="nprscience" target="_blank" style="color: #cccccc; text-decoration: none;">nprscience</a> · <a href="https://soundcloud.com/nprscience/supernova-sonification-two" title="Supernova Sonification (Two)" target="_blank" style="color: #cccccc; text-decoration: none;">Supernova Sonification (Two)</a></div>
+
+Wanda Díaz-Merced is a Puerto Rican astronomer known for using sonification while studying stars. She is the director of the Arecibo Observatory.
+
+##
+
+
+```{r}
+#| fig-align: center
+#| fig-cap: Same-sex marriages in Buenos Aires City by Macarena Zappe [Image source](https://www.informationisbeautifulawards.com/showcase/7137-same-sex-marriages-in-buenos-aires-city)
+knitr::include_graphics("img/wedding.png")
+```
+
+##
+
+```{r}
+#| fig-align: center
+#| fig-cap: COVID related table by the Economist [Image source](https://connorrothschild.github.io/v2/post/economist-table-replication-using-reactable/)
+knitr::include_graphics("img/econ-table.png")
+```
+
+##
+
+```{r}
+#| fig-align: center
+#| fig-cap: Howardena Pindell's Four Litte Girls [Image source](https://www.nytimes.com/2020/10/16/arts/design/howardena-pindell-shed-video.html)
+knitr::include_graphics("img/pindell.png")
+```
+
+##
+
+```{r}
+#| fig-align: center
+#| fig-cap: LA Metro Rail map [Image source](https://www.metro.net/moredtla/)
+knitr::include_graphics("img/la-metro.jpg")
+```
+
+##
+
+```{r}
+#| fig-align: center
+#| fig-cap: North Circumpolar Region from the Dunhuang Star Chart circa 649-684 CE. [Image source](https://nwcartographic.com/blogs/essays-articles/the-dunhuang-star-chart?srsltid=AfmBOorALMmUZdGtag0zLp91hWhH1kC7z15sozMiZjJBOzdfnnvB6n7h)
+knitr::include_graphics("img/star-chart.jpeg")
+```
+
+# Q1. What is data representation?
+
+Data representation refers to the way we structure data in a way to make it easier for us to understand the trends, patterns, relationships that are found in the raw data. 
+
+# 
+
+:::{.font50} 
+
+Data visualization is *one* way of representing data. We have also seen data sonification and data in tactile format (e.g., the sticks).
+
+
+:::
+
+# 
+
+:::{.font50} 
+
+Tables, maps, charts, plots, infographics are some ways of visualizing data.
+:::
+
+# 
+
+:::{.font50} 
+Different tools: pen, paper, digital platforms, software, physical objects can be used to represent data.
+:::
+
+# 
+
+:::{.font50} 
+
+Data representations do not necessarily have to be made by a data scientist but you need to understand data science, domain science, and art.
+
+:::
+
+
+# Q2. How does one make good data visualizations? 
+
+
+## Alternate Text
+
+##
+
+<br>
+<br>
+
+
+# Do not rely on software defaults
+
+1. For labels (e.g. count vs. proportion)
+2. For colors
+3. For font size
+4. For background
+
+
+
+
+
+:::{.font75}
+[One Dataset, Visualized 25 Ways](https://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/)
+
+:::
+
+
+# Ethics of data visualization
+
+
+## 
+
+```{r}
+#| fig-align: center
+#| fig-cap: For Datathon today think outside the box PLEASE
+knitr::include_graphics("img/box.png")
+```
 
 ## QUESTIONS?
 
