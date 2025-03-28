@@ -2,7 +2,7 @@
 title: "The Good, The Bad, and The Ugly Ways of Representing Data"
 author: "Mine Dogucu <br> University of California Irvine"
 date: "03-29-2025"
-subtitle: "Talk at Harvey Mudd College"
+subtitle: "Talk at Harvey Mudd College <br> [mdogucu.github.io/harvey-mudd-25](https://mdogucu.github.io/harvey-mudd-25)"
 format: 
   revealjs:
     slide-number: true
@@ -71,6 +71,12 @@ include_graphics("img/nyt.png")
 [Image source](https://www.nytimes.com/2025/02/27/learning/whats-going-on-in-this-graph-march-5-2025.html)
 
 :::
+
+```{r}
+countdown::countdown(minutes = 1, seconds = 00)
+```
+
+
 
 ## 
 
@@ -245,6 +251,12 @@ include_graphics("img/fox-corrected.png")
 [Image source](https://flowingdata.com/2012/08/06/fox-news-continues-charting-excellence/)
 :::
 
+. . .
+
+:::{.callout-tip}
+Whenever possible start the axis at zero. 
+:::
+
 ## Aspect ratio
 
 ```{r}
@@ -275,7 +287,7 @@ include_graphics("img/nyt-lead-poisoning.png")
 [Image source](https://www.nytimes.com/2025/01/16/learning/whats-going-on-in-this-graph-jan-29-2025.html)
 :::
 
-## Color for representing quantitative values
+## Color for representing numeric values
 
 ```{r}
 #| fig-align: center
@@ -322,6 +334,13 @@ include_graphics("https://giggster.com/guide/static/fed42130c194b0c240a4ec10408a
 . . .
 
 :::{.font75}
+
+[Okabe-Ito Color Palette](https://siegal.bio.nyu.edu/color-palette/)
+
+:::
+. . .
+
+:::{.font75}
 [Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
 :::
 
@@ -332,7 +351,7 @@ include_graphics("https://giggster.com/guide/static/fed42130c194b0c240a4ec10408a
 :::
 
 
-# Choose (more) legible font
+# Fonts matter
 
 
 ## Fonts matter for clarity
@@ -362,9 +381,16 @@ include_graphics("img/fonts-matter.png")
 
 ##
 
+<br>
+<br>
+
 ```{r}
+#| fig-align: center
 include_graphics("img/number-styles.png")
 ```
+:::{.imagelink}
+[Image source](https://discussions.apple.com/thread/8001888?sortBy=rank)
+:::
 
 . . .
 
@@ -372,29 +398,42 @@ include_graphics("img/number-styles.png")
 Use lining and tabular fonts for numbers.
 :::
 
+##
+
+<br>
+<br>
+<br>
+
+:::{.font75}
+[Google Fonts](https://fonts.google.com/)
+:::
 
 
-
-# Detour for an example
+# An example
 
 Many design decisions go into making a data visualization. 
 The following example is from one of my favorite data visualization experts [Cara Thompson](https://www.cararthompson.com/) shared with CC-BY license.
 
-## Data context
+## Data context 
 
-The response is the length of odontoblasts (cells responsible for tooth growth) in 60 guinea pigs. Each animal received one of **three dose levels of vitamin C** (0.5, 1, and 2 mg/day) by one of two delivery methods, **orange juice or ascorbic acid** (a form of vitamin C and coded as VC).
+```{r}
+#| fig-align: center
+knitr::include_graphics("img/tooth-growth.png")
+```
+
 
 ##
 
 ```{r}
-
-ToothGrowth |>
+initial_plot <- ToothGrowth |>
   group_by(supp, dose) |>
   summarise(mean_length = mean(len)) |>
   ggplot(aes(x = dose,
              y = mean_length,
              fill = supp)) +
   geom_bar(stat = "identity")
+
+initial_plot
 ```
 
 ## 
@@ -733,7 +772,7 @@ basic_plot +
 ##
 
 ```{r}
-basic_plot +
+final_plot <- basic_plot +
   labs(title = 
          paste0("In smaller doses, **<span style='color:",
                 vit_c_palette["Orange Juice"], "'>Orange Juice</span>**
@@ -758,8 +797,38 @@ basic_plot +
                                   size = rel(1.1), face = "bold",
                                   margin = margin(2, 0, 0.5, 0, "lines")),
         axis.text = element_text(colour = vit_c_palette["light_text"]))
+
+final_plot
 ```
 
+##
+
+::::{.columns}
+
+:::{.column}
+
+```{r}
+#| fig-align: center
+initial_plot
+```
+
+:::
+
+:::{.column}
+
+```{r}
+#| fig-align: center
+final_plot
+```
+
+:::
+::::
+
+. . .
+
+:::{.callout-tip}
+Do not rely on software defaults for font size, font type, colors, labels, text alignment, legend, etc. without intention.
+:::
 
 # Write alternate text
 
