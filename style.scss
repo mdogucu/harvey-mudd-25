@@ -49,8 +49,32 @@ $code-block-bg: #FFFFFF;
 .font150{font-size:150px}
 
 
+
+.reveal div .imagelink {
+  p {
+    margin: 0;
+  }
+  margin: 0;
+  position: relative;
+  bottom: 1%;
+  right: 5%;
+  text-align: right;
+  font-size: 16px; 
+}
+
 /* focus on a specific row of a table if needed
 .focus tr:nth-child(2) { 
   background: #f8c6a5; 
 }
 */
+
+.reveal .slide-number > a[href*='title-slide'] {
+  display: none;
+}
+
+.reveal .callout.callout-tip.callout-style-simple {
+  background-color: lighten($body-bg, 10%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Enriqueta:wght@400;500;600;700&display=swap');

@@ -3,13 +3,26 @@ title: "The Good, The Bad, and The Ugly Ways of Representing Data"
 author: "Mine Dogucu <br> University of California Irvine"
 date: "03-29-2025"
 subtitle: "Talk at Harvey Mudd College"
-footer: "mdogucu.github.io/harvey-mudd-25"
 format: 
   revealjs:
     slide-number: true
     incremental: true
     theme: ["style.scss"]
+
 ---
+
+```{r}
+library(tidyverse)
+library(knitr)
+library(palmerpenguins)
+sysfonts::font_add_google("Enriqueta")
+sysfonts::font_add_google("Cabin")
+showtext::showtext_auto()
+
+data(penguins)
+remove(penguins_raw)
+```
+
 
 ## Questions for the day 
 
@@ -24,18 +37,47 @@ Q2. How does one make good data visualizations? (and how does one avoid making b
 
 ##
 
+
+
 ```{r}
 #| fig-align: center
-#| fig-cap: NYT What's Going on In This Graph? [Image source](https://www.nytimes.com/2025/02/27/learning/whats-going-on-in-this-graph-march-5-2025.html)
-knitr::include_graphics("img/nyt.png")
+#| out-width: 100%
+#| fig-cap: North Circumpolar Region from the Dunhuang Star Chart circa 649-684 CE. 
+include_graphics("img/star-chart.jpeg")
 ```
+
+:::{.imagelink}
+[Image source](https://nwcartographic.com/blogs/essays-articles/the-dunhuang-star-chart?srsltid=AfmBOorALMmUZdGtag0zLp91hWhH1kC7z15sozMiZjJBOzdfnnvB6n7h)
+:::
+
+
+. . .
+
+::: {.callout-tip title = "Recommended reading"}
+Funkhouser, H. G. (1937). Historical Development of the Graphical Representation of Statistical Data. Osiris, 3, 269–404. Chapter 2 is on The Origin of the Graphic Method.
+
+:::
+
+
+##
+
+```{r}
+#| fig-align: center
+include_graphics("img/nyt.png")
+```
+
+:::{.imagelink}
+
+[Image source](https://www.nytimes.com/2025/02/27/learning/whats-going-on-in-this-graph-march-5-2025.html)
+
+:::
 
 ## 
 
 ```{r}
 #| fig-align: center
-#| fig-cap: Assessed value of household and kitchen furniture owned by Black people in Georgia. Image from the book cover. 
-knitr::include_graphics("img/dubois.png")
+#| fig-cap: Assessed value of household and kitchen furniture owned by Black people in Georgia. 
+include_graphics("img/dubois.png")
 ```
 
 
@@ -45,7 +87,7 @@ knitr::include_graphics("img/dubois.png")
 ```{r}
 #| fig-align: center
 #| fig-cap: 20th century navigational chart from Kwajalein Attoll, Marshall Islands, Micronesia on display at Bower Museum in Santa Ana. Photo by Mine Dogucu.
-knitr::include_graphics("img/navy-chart.jpg")
+include_graphics("img/navy-chart.jpg")
 ```
 
 
@@ -53,10 +95,14 @@ knitr::include_graphics("img/navy-chart.jpg")
 
 ```{r}
 #| fig-align: center
-#| fig-cap: Visualization by Mona Chalabi. [Image source](https://artsandculture.google.com/asset/years-with-a-female-head-of-state-mona-chalabi/TgEsPdWevaDz0A?hl=en)
-knitr::include_graphics("img/mona-chalabi.png")
+#| fig-cap: Visualization by Mona Chalabi.
+include_graphics("img/mona-chalabi.png")
 ```
 
+
+:::{.imagelink}
+[Image source](https://artsandculture.google.com/asset/years-with-a-female-head-of-state-mona-chalabi/TgEsPdWevaDz0A?hl=en)
+:::
 
 ## {background-image="img/stars.jpg" background-opacity="0.2"}
 
@@ -69,41 +115,52 @@ Wanda Díaz-Merced is a Puerto Rican astronomer known for using sonification whi
 
 ```{r}
 #| fig-align: center
-#| fig-cap: Same-sex marriages in Buenos Aires City by Macarena Zappe [Image source](https://www.informationisbeautifulawards.com/showcase/7137-same-sex-marriages-in-buenos-aires-city)
-knitr::include_graphics("img/wedding.png")
+#| fig-cap: Same-sex marriages in Buenos Aires City by Macarena Zappe 
+include_graphics("img/wedding.png")
 ```
+
+:::{.imagelink}
+[Image source](https://www.informationisbeautifulawards.com/showcase/7137-same-sex-marriages-in-buenos-aires-city)
+:::
 
 ##
 
 ```{r}
 #| fig-align: center
-#| fig-cap: COVID related table by the Economist [Image source](https://connorrothschild.github.io/v2/post/economist-table-replication-using-reactable/)
-knitr::include_graphics("img/econ-table.png")
+#| fig-cap: COVID related deaths table by the Economist 
+include_graphics("img/econ-table.png")
 ```
+
+
+:::{.imagelink}
+[Image source](https://connorrothschild.github.io/v2/post/economist-table-replication-using-reactable/)
+:::
+
 
 ##
 
 ```{r}
 #| fig-align: center
-#| fig-cap: Howardena Pindell's Four Litte Girls [Image source](https://www.nytimes.com/2020/10/16/arts/design/howardena-pindell-shed-video.html)
-knitr::include_graphics("img/pindell.png")
+#| fig-cap: Howardena Pindell's Four Litte Girls 
+include_graphics("img/pindell.png")
 ```
 
+:::{.imagelink}
+[Image source](https://www.nytimes.com/2020/10/16/arts/design/howardena-pindell-shed-video.html)
+:::
 ##
 
 ```{r}
 #| fig-align: center
-#| fig-cap: LA Metro Rail map [Image source](https://www.metro.net/moredtla/)
-knitr::include_graphics("img/la-metro.jpg")
+#| fig-cap: LA Metro Rail map 
+include_graphics("img/la-metro.jpg")
 ```
 
-##
+:::{.imagelink}
+[Image source](https://www.metro.net/moredtla/)
+:::
 
-```{r}
-#| fig-align: center
-#| fig-cap: North Circumpolar Region from the Dunhuang Star Chart circa 649-684 CE. [Image source](https://nwcartographic.com/blogs/essays-articles/the-dunhuang-star-chart?srsltid=AfmBOorALMmUZdGtag0zLp91hWhH1kC7z15sozMiZjJBOzdfnnvB6n7h)
-knitr::include_graphics("img/star-chart.jpeg")
-```
+
 
 # Q1. What is data representation?
 
@@ -128,55 +185,655 @@ Tables, maps, charts, plots, infographics are some ways of visualizing data.
 # 
 
 :::{.font50} 
-Different tools: pen, paper, digital platforms, software, physical objects can be used to represent data.
+The coordinate system, length, width, area, volume, color, and, shape are ways we map data as visual elements.
+:::
+
+# 
+
+:::{.font50} 
+Different tools (e.g., pen, paper, digital platforms, software, physical objects) can be used to represent data.
 :::
 
 # 
 
 :::{.font50} 
 
-Data representations do not necessarily have to be made by a data scientist but you need to understand data science, domain science, and art.
+Data representations do not necessarily have to be made by a data scientist but you need to understand data science, domain discipline, and art.
 
+:::
+
+# 
+
+:::{.font50} 
+Data representations can be used for exploratory reasons and explanatory reasons.
 :::
 
 
 # Q2. How does one make good data visualizations? 
 
 
-## Alternate Text
+# Avoid deception
 
-##
+## Truncated Axis
 
-<br>
-<br>
+:::: {.columns}
 
+::: {.column width="50%"}
 
-# Do not rely on software defaults
-
-1. For labels (e.g. count vs. proportion)
-2. For colors
-3. For font size
-4. For background
-
+```{r}
+#| fig-align: center
+#| out-width: 100%
+include_graphics("img/fox.png")
+```
 
 
+:::
+
+::: {.column width="50%"}
+```{r}
+#| fig-align: center
+#| out-width: 50%
+include_graphics("img/fox-corrected.png")
+```
+
+:::
+
+::::
+
+
+:::{.imagelink}
+[Image source](https://flowingdata.com/2012/08/06/fox-news-continues-charting-excellence/)
+:::
+
+## Aspect ratio
+
+```{r}
+#| fig-align: center
+#| out-width: 50%
+include_graphics("img/aspect-ratio.png")
+```
+
+
+:::{.imagelink}
+[Image source](https://graphworkflow.com/enhancement/aspect/)
+:::
+
+
+# Choose colors with a purpose
+
+
+## Color for grouping
+
+```{r}
+#| fig-align: center
+#| out-width: 50%
+include_graphics("img/nyt-lead-poisoning.png")
+```
+
+
+:::{.imagelink}
+[Image source](https://www.nytimes.com/2025/01/16/learning/whats-going-on-in-this-graph-jan-29-2025.html)
+:::
+
+## Color for representing quantitative values
+
+```{r}
+#| fig-align: center
+#| out-width: 50%
+include_graphics("img/nyt-map.png")
+```
+
+:::{.imagelink}
+[Image source](https://www.nytimes.com/2024/01/03/learning/whats-going-on-in-this-graph-jan-10-2024.html)
+
+:::
+
+## Color for emphasis
+
+```{r}
+#| fig-align: center
+#| out-width: 50%
+include_graphics("img/nyt-emphasis.png")
+```
+
+
+:::{.imagelink}
+[Image source](https://www.nytimes.com/2024/10/10/learning/whats-going-on-in-this-graph-oct-23-2024.html)
+
+:::
+## Color Theory
+
+```{r}
+#| fig-align: center
+include_graphics("https://giggster.com/guide/static/fed42130c194b0c240a4ec10408adf97/8282f/hsl-cover-2.png")
+```
+
+:::{.imagelink}
+[Image source](https://giggster.com/guide/static/fed42130c194b0c240a4ec10408adf97/8282f/hsl-cover-2.png)
+:::
+
+## How to Pick a Color Palette
 
 
 :::{.font75}
-[One Dataset, Visualized 25 Ways](https://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/)
+[Adobe - Color Wheel](https://color.adobe.com/create/color-wheel)
+:::
+
+. . .
+
+:::{.font75}
+[Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
+:::
+
+. . .
+
+:::{.font75}
+[vis4.net/palettes](https://www.vis4.net/palettes)
+:::
+
+
+# Choose (more) legible font
+
+
+## Fonts matter for clarity
+
+
+```{r}
+#| fig-align: center
+include_graphics("img/tarts.jpeg")
+```
+
+
+:::{.imagelink}
+[Image source](https://www.reddit.com/r/funny/comments/rn98p/poor_font_selection/)
+:::
+
+## Fonts matter for the message
+
+```{r}
+#| fig-align: center
+include_graphics("img/fonts-matter.png")
+```
+
+:::{.imagelink}
+[Image Source](https://www.mysocialdesigner.com/blog/christmas-fonts-in-canva)
+:::
+
+
+##
+
+```{r}
+include_graphics("img/number-styles.png")
+```
+
+. . .
+
+:::{.callout-tip}
+Use lining and tabular fonts for numbers.
+:::
+
+
+
+
+# Detour for an example
+
+Many design decisions go into making a data visualization. 
+The following example is from one of my favorite data visualization experts [Cara Thompson](https://www.cararthompson.com/) shared with CC-BY license.
+
+## Data context
+
+The response is the length of odontoblasts (cells responsible for tooth growth) in 60 guinea pigs. Each animal received one of **three dose levels of vitamin C** (0.5, 1, and 2 mg/day) by one of two delivery methods, **orange juice or ascorbic acid** (a form of vitamin C and coded as VC).
+
+##
+
+```{r}
+
+ToothGrowth |>
+  group_by(supp, dose) |>
+  summarise(mean_length = mean(len)) |>
+  ggplot(aes(x = dose,
+             y = mean_length,
+             fill = supp)) +
+  geom_bar(stat = "identity")
+```
+
+## 
+
+```{r}
+ToothGrowth |>
+  group_by(supp, dose) |>
+  summarise(mean_length = mean(len)) |>
+  ggplot(aes(x = dose,
+             y = mean_length,
+             fill = supp)) +
+  geom_bar(stat = "identity",
+           position = "dodge")
+```
+
+##
+
+```{r}
+ToothGrowth |>
+  group_by(supp, dose) |>
+  summarise(mean_length = mean(len)) |>
+  ggplot(aes(x = dose,
+             y = mean_length,
+             fill = supp)) +
+  geom_bar(stat = "identity",
+           position = "dodge", 
+           colour = "#FFFFFF",
+           size = 2)
+```
+
+##
+
+```{r}
+ToothGrowth |>
+  mutate(supplement = 
+           case_when(supp == "OJ" ~ "Orange Juice",
+                     supp == "VC" ~ "Vitamin C",
+                     TRUE ~ as.character(supp))) |>
+  group_by(supplement, dose) |>
+  summarise(mean_length = mean(len)) |>
+  ggplot(aes(x = dose,
+             y = mean_length,
+             fill = supplement)) +
+  geom_bar(stat = "identity",
+           position = "dodge", 
+           colour = "#FFFFFF",
+           size = 2)
+```
+
+##
+
+```{r}
+ToothGrowth |>
+  mutate(supplement = 
+           case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
+  group_by(supplement, dose) |>
+  summarise(mean_length = mean(len)) |>
+  ggplot(aes(x = dose,
+             y = mean_length,
+             fill = supplement)) +
+  geom_bar(stat = "identity",
+           position = "dodge", 
+           colour = "#FFFFFF",
+           size = 2) +
+  theme_minimal()
+```
+
+
+##
+
+```{r}
+ToothGrowth |>
+  mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
+  group_by(supplement, dose) |>
+  summarise(mean_length = mean(len)) |>
+  mutate(categorical_dose = factor(dose)) |>
+  ggplot(aes(x = categorical_dose,
+             y = mean_length,
+             fill = supplement)) +
+  geom_bar(stat = "identity",
+           position = "dodge",
+           colour = "#FFFFFF", 
+           size = 2) +
+  theme_minimal()
+```
+
+##
+
+```{r}
+ToothGrowth |>
+  mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
+  group_by(supplement, dose) |>
+  summarise(mean_length = mean(len)) |>
+  mutate(categorical_dose = factor(dose)) |>
+  ggplot(aes(x = categorical_dose,
+             y = mean_length,
+             fill = supplement)) +
+  geom_bar(stat = "identity",
+           colour = "#FFFFFF", 
+           size = 2) + 
+  facet_wrap(supplement ~ ., ncol = 1) +
+  theme_minimal()
+```
+
+##
+
+```{r}
+ToothGrowth |>
+  mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
+  group_by(supplement, dose) |>
+  summarise(mean_length = mean(len)) |>
+  mutate(categorical_dose = factor(dose)) |>
+  ggplot(aes(x = categorical_dose,
+             y = mean_length,
+             fill = supplement)) +
+  geom_bar(stat = "identity",
+           colour = "#FFFFFF", 
+           size = 2) + 
+  labs(x = "Dose",
+       y = "Mean length (mm)",
+       title = "In smaller doses, Orange Juice was associated with greater mean tooth growth,
+compared to equivalent doses of Vitamin C",
+subtitle = "With the highest dose, the mean recorded length was almost identical.") +
+  facet_wrap(supplement ~ ., ncol = 1) +
+  theme_minimal()
+```
+
+##
+
+```{r}
+
+vit_c_palette <- c("Orange Juice" = "#fab909", 
+                   "Vitamin C" = "#E93603",
+                   light_text = "#323A30",
+                   dark_text =  "#0C1509")
+
+ToothGrowth |>
+  mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
+  group_by(supplement, dose) |>
+  summarise(mean_length = mean(len)) |>
+  mutate(categorical_dose = factor(dose),
+         supplement = 
+           factor(supplement, 
+                  levels = c("Vitamin C", 
+                             "Orange Juice"))) |>
+  ggplot(aes(x = categorical_dose,
+             y = mean_length,
+             fill = supplement)) +
+  geom_bar(stat = "identity",
+           colour = "#FFFFFF", 
+           size = 2) + 
+  labs(x = "Dose",
+       y = "Mean length (mm)",
+       title = "In smaller doses, Orange Juice was associated with greater mean tooth growth,
+compared to equivalent doses of Vitamin C",
+subtitle = "With the highest dose, the mean recorded length was almost identical.") +
+  scale_fill_manual(values = vit_c_palette) +
+  facet_wrap(supplement ~ ., ncol = 1) +
+  theme_minimal()
+```
+
+##
+
+```{r}
+ToothGrowth |>
+  mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
+  group_by(supplement, dose) |>
+  summarise(mean_length = mean(len)) |>
+  mutate(categorical_dose = factor(dose)) |>
+  ggplot(aes(x = categorical_dose,
+             y = mean_length,
+             fill = supplement)) +
+  geom_bar(aes(alpha = dose),
+           stat = "identity",
+           colour = "#FFFFFF", 
+           size = 2) + 
+  labs(x = "Dose",
+       y = "Mean length (mm)",
+       title = "In smaller doses, Orange Juice was associated with greater mean tooth growth,
+compared to equivalent doses of Vitamin C",
+subtitle = "With the highest dose, the mean recorded length was almost identical.") +
+  scale_fill_manual(values = vit_c_palette, limits = force) +
+  scale_alpha(range = c(0.33, 1)) +
+  facet_wrap(supplement ~ ., ncol = 1) +
+  theme_minimal()
+```
+
+
+##
+
+```{r}
+ToothGrowth |>
+  mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
+  group_by(supplement, dose) |>
+  summarise(mean_length = mean(len)) |>
+  mutate(categorical_dose = factor(dose)) |>
+  ggplot(aes(x = categorical_dose,
+             y = mean_length,
+             fill = supplement)) +
+  geom_bar(aes(alpha = dose),
+           stat = "identity",
+           colour = "#FFFFFF", 
+           size = 2) + 
+  labs(x = "Dose",
+       y = "Mean length (mm)",
+       title = "In smaller doses, Orange Juice was associated with greater mean tooth growth,
+compared to equivalent doses of Vitamin C",
+subtitle = "With the highest dose, the mean recorded length was almost identical.") +
+  scale_fill_manual(values = vit_c_palette, limits = force) +
+  scale_alpha(range = c(0.33, 1)) +
+  facet_wrap(supplement ~ ., ncol = 1) +
+  scale_x_discrete(breaks = c("0.5", "1", "2"), labels = function(x) paste0(x, " mg/day")) +
+  theme_minimal() +
+  theme(legend.position = "none")
+```
+
+##
+
+```{r}
+basic_plot <- ToothGrowth |>
+  mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
+  group_by(supplement, dose) |>
+  summarise(mean_length = mean(len)) |>
+  mutate(categorical_dose = factor(dose)) |>
+  ggplot(aes(x = categorical_dose,
+             y = mean_length,
+             fill = supplement)) +
+  geom_bar(aes(alpha = dose),
+           stat = "identity",
+           colour = "#FFFFFF", 
+           size = 2) + 
+  labs(x = "Dose",
+       y = "Mean length (mm)",
+       title = "In smaller doses, Orange Juice was associated with greater mean tooth growth,
+compared to equivalent doses of Vitamin C",
+subtitle = "With the highest dose, the mean recorded length was almost identical.") +
+  scale_fill_manual(values = vit_c_palette, limits = force) +
+  scale_alpha(range = c(0.4, 1)) +
+  scale_x_discrete(breaks = c("0.5", "1", "2"), labels = function(x) paste0(x, " mg/day")) +
+  coord_flip() +
+  facet_wrap(supplement ~ ., ncol = 1) +
+  theme_minimal() +
+  theme(legend.position = "none")
+basic_plot
+```
+
+
+##
+
+```{r}
+basic_plot +
+  theme(legend.position = "none",
+        text = element_text(colour = vit_c_palette["light_text"],
+                            family = "Cabin"),
+        plot.title = element_text(colour = vit_c_palette["dark_text"], 
+                                  size = rel(1.5), 
+                                  face = "bold",
+                                  family = "Enriqueta"),
+        strip.text = element_text(family = "Enriqueta",
+                                  colour = vit_c_palette["light_text"], 
+                                  size = rel(1.1), face = "bold"),
+        axis.text = element_text(colour = vit_c_palette["light_text"]))
+```
+##
+
+```{r}
+basic_plot +
+  theme(legend.position = "none",
+        text = element_text(colour = vit_c_palette["light_text"], 
+                            family = "Cabin"),
+        plot.title = element_text(colour = vit_c_palette["dark_text"], 
+                                  size = rel(1.5), 
+                                  face = "bold",
+                                  family = "Enriqueta",
+                                  lineheight = 1.3,
+                                  margin = margin(0.5, 0, 1, 0, "lines")),
+        plot.subtitle = element_text(size = rel(1.1), lineheight = 1.3,
+                                     margin = margin(0, 0, 1, 0, "lines")),
+        strip.text = element_text(family = "Enriqueta",
+                                  colour = vit_c_palette["light_text"], 
+                                  size = rel(1.1), face = "bold",
+                                  margin = margin(2, 0, 0.5, 0, "lines")),
+        axis.text = element_text(colour = vit_c_palette["light_text"]))
+```
+
+##
+
+```{r}
+basic_plot +
+  theme(legend.position = "none",
+        text = element_text(colour = vit_c_palette["light_text"], 
+                            family = "Cabin"),
+        axis.title.y = element_blank(),
+        plot.title = element_text(colour = vit_c_palette["dark_text"], 
+                                  size = rel(1.5), 
+                                  face = "bold",
+                                  family = "Enriqueta",
+                                  lineheight = 1.3,
+                                  margin = margin(0.5, 0, 1, 0, "lines")),
+        plot.subtitle = element_text(size = rel(1.1), lineheight = 1.3,
+                                     margin = margin(0, 0, 1, 0, "lines")),
+        strip.text = element_text(family = "Enriqueta",
+                                  colour = vit_c_palette["light_text"], 
+                                  size = rel(1.1), face = "bold",
+                                  margin = margin(2, 0, 0.5, 0, "lines")),
+        axis.text = element_text(colour = vit_c_palette["light_text"]))
+```
+
+##
+
+```{r}
+basic_plot +
+  labs(title = "In smaller doses, Orange Juice was associated with greater mean tooth growth, compared to equivalent doses of Vitamin C") +
+  theme(legend.position = "none",
+        text = element_text(colour = vit_c_palette["light_text"],
+                            family = "Cabin"),
+        axis.title.y = element_blank(),
+        plot.title = ggtext::element_textbox_simple(
+          colour = vit_c_palette["dark_text"], 
+          size = rel(1.5), 
+          face = "bold",
+          family = "Enriqueta",
+          lineheight = 1.3,
+          margin = margin(0.5, 0, 1, 0, "lines")),
+        plot.subtitle = ggtext::element_textbox_simple(
+          size = rel(1.1), 
+          lineheight = 1.3,
+          margin = margin(0, 0, 1, 0, "lines")),
+        strip.text = element_text(family = "Enriqueta",
+                                  colour = vit_c_palette["light_text"],
+                                  size = rel(1.1), face = "bold",
+                                  margin = margin(2, 0, 0.5, 0, "lines")),
+        axis.text = element_text(colour = vit_c_palette["light_text"]))
+```
+
+##
+
+```{r}
+basic_plot +
+  labs(title = 
+         paste0("In smaller doses, **<span style='color:",
+                vit_c_palette["Orange Juice"], "'>Orange Juice</span>**
+                      was associated with greater mean tooth growth,
+                      compared to equivalent doses of **<span style='color:",
+                vit_c_palette["Vitamin C"], "'>Vitamin C</span>**")
+  ) +
+  theme(legend.position = "none",
+        text = element_text(colour = vit_c_palette["light_text"],
+                            family = "Cabin"),
+        axis.title.y = element_blank(),
+        plot.title = ggtext::element_textbox_simple(colour = vit_c_palette["dark_text"], 
+                                                    size = rel(1.5), 
+                                                    face = "bold",
+                                                    family = "Enriqueta",
+                                                    lineheight = 1.3,
+                                                    margin = margin(0.5, 0, 1, 0, "lines")),
+        plot.subtitle = ggtext::element_textbox_simple(family = "Cabin", size = rel(1.1), lineheight = 1.3,
+                                                       margin = margin(0, 0, 1, 0, "lines")),
+        strip.text = element_text(family = "Enriqueta",
+                                  colour = vit_c_palette["light_text"],
+                                  size = rel(1.1), face = "bold",
+                                  margin = margin(2, 0, 0.5, 0, "lines")),
+        axis.text = element_text(colour = vit_c_palette["light_text"]))
+```
+
+
+# Write alternate text
+
+## Screen reader example
+
+<div class="horizontal-center">
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l-G4kKTuDHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The video shows use of a screen reader briefly. 
+
+</div>
+
+## Alternate Text
+
+:::{.nonincremental}
+- "Alt text" describes contents of an image. 
+- Screen-readers cannot read images but can read alt text. 
+- Alt text has to be provided. 
 
 :::
 
 
-# Ethics of data visualization
+## Manual Alternate Text
+:::{.nonincremental}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Chart type
+
+- Type of data
+
+- Reason for including the chart
+
+- Link to data or source (not in alt text but in main text)
+
+
+[Cesal, 2020](https://medium.com/nightingale/writing-alt-text-for-data-visualization-2a218ef43f81)
+:::
+
+::: {.column width="50%"}
+- Description conveys meaning in the data
+
+- Variables included on the axes
+
+- Scale described within the description
+
+- Type of plot is described
+
+[Canelón & Hare, 2021 ](https://www.youtube.com/watch?v=DxLkv2iRdf8&ab_channel=csvconf)
+:::
+
+::::
+
+:::
+
+
+
+# Consider ethical implications
+
+## Ethics of data visualization
+
+In the [Bayes Rules!](https://www.bayesrulesbook.com/chapter-10) book, authors raise the following questions for model fairness. We can extend these to data visualizations.
+
+> How was the data collected? By whom and for what purpose? How might the results of the analysis, or the data collection itself, impact individuals and society? What biases or power structures might be baked into this analysis?
 
 
 ## 
 
 ```{r}
 #| fig-align: center
-#| fig-cap: For Datathon today think outside the box PLEASE
-knitr::include_graphics("img/box.png")
+#| fig-cap: Since you are not a cat, for Datathon think outside the box PLEASE
+include_graphics("img/box.png")
 ```
 
 ## QUESTIONS?
