@@ -42,6 +42,7 @@ Q2. How does one make good data visualizations? (and how does one avoid making b
 ```{r}
 #| fig-align: center
 #| out-width: 100%
+#| fig-alt: an illustration done an old paper with cicrles representing possibly stars with some Chinese characters attached to them.
 #| fig-cap: North Circumpolar Region from the Dunhuang Star Chart circa 649-684 CE. 
 include_graphics("img/star-chart.jpeg")
 ```
@@ -63,6 +64,7 @@ Funkhouser, H. G. (1937). Historical Development of the Graphical Representation
 
 ```{r}
 #| fig-align: center
+#| fig-alt: The title of the plot reads change in kindergarten measles vaccination rates. On the x axis the values range from 80% to 100%. Each state has two values reporesented. For instance for Idaho prepandemic vaccination rate is around 89% but vaccination rate in 2023-2024 is about 80%. There is a line labeled as Idaho with an arrow showing the direction from 89% to 80%. Other statements some in the direction of increases as well as US average is visible.
 include_graphics("img/nyt.png")
 ```
 
@@ -82,7 +84,9 @@ countdown::countdown(minutes = 1, seconds = 00)
 
 ```{r}
 #| fig-align: center
-#| fig-cap: Assessed value of household and kitchen furniture owned by Black people in Georgia. 
+#| fig-cap: Assessed value of household and kitchen furniture owned by Black people in Georgia.
+#| fig-alt: There are spirals at the edge of a circle going inwards. Outside ring is labeled as 1875 and $21.86. Going from outer rings to inner rings labels are as follows 1880 $488.532, 1885 $738.170, 1890 $1173.684, 1885 $1322.894, 1888 $1434.975. The length of the rings increase as the dollar amounts increase.
+
 include_graphics("img/dubois.png")
 ```
 
@@ -93,6 +97,7 @@ include_graphics("img/dubois.png")
 ```{r}
 #| fig-align: center
 #| fig-cap: 20th century navigational chart from Kwajalein Attoll, Marshall Islands, Micronesia on display at Bower Museum in Santa Ana. Photo by Mine Dogucu.
+#| fig-alt: A non-square grid of wooden sticks with some material stuck to intersections.
 include_graphics("img/navy-chart.jpg")
 ```
 
@@ -103,6 +108,7 @@ include_graphics("img/navy-chart.jpg")
 #| fig-align: center
 #| fig-cap: Visualization by Mona Chalabi.
 include_graphics("img/mona-chalabi.png")
+#| fig-alt: A marker and paper drawing of a bar plot where each bar shows a feminine hand. The title of the plot is years with a female head of state. The countries listed in the order of highest to lowest years of female leadership are Bangladesh, India and Ireland, Iceland, Philippines, Sri Lanka, Finland and Norway and UK, United States (with 0 years).
 ```
 
 
@@ -120,6 +126,7 @@ Wanda Díaz-Merced is a Puerto Rican astronomer known for using sonification whi
 
 
 ```{r}
+#| fig-alt: The figure shows a layered wedding cake. In the caption it says "according to data from the city of Buenos Aires since 2010 the number of LGBTQ+ marriages per year has almost tripled" At the top of the cake there is a gay couple. The following years and numbers are associated with each layer of the cake going from the top layer to the bottom layer 2010 and 786, 2014 and 870, 2018 and 1038, 2022 and 1720.
 #| fig-align: center
 #| fig-cap: Same-sex marriages in Buenos Aires City by Macarena Zappe 
 include_graphics("img/wedding.png")
@@ -133,7 +140,8 @@ include_graphics("img/wedding.png")
 
 ```{r}
 #| fig-align: center
-#| fig-cap: COVID related deaths table by the Economist 
+#| fig-cap: COVID related deaths table by the Economist
+#| fig-alt: This is a table with a title "Excess mortality since region/country's first 50 covid deaths" Columns of the table include region/country, time period, covid-19 deaths (which shows number of deaths in a bar corresponding to length),total excess death (which also shows number of deaths in a different colored bar corresponding to length), and covid-19 as % of total. The bar lengths go from longest to shortest from top to bottom of the table.
 include_graphics("img/econ-table.png")
 ```
 
@@ -148,6 +156,7 @@ include_graphics("img/econ-table.png")
 ```{r}
 #| fig-align: center
 #| fig-cap: Howardena Pindell's Four Litte Girls 
+#| fig-alt: A painting on canvas with mostly black colors and gray text. In the middle of the painting there are portraits of four little girls.  
 include_graphics("img/pindell.png")
 ```
 
@@ -159,6 +168,7 @@ include_graphics("img/pindell.png")
 ```{r}
 #| fig-align: center
 #| fig-cap: LA Metro Rail map 
+#| fig-alt: illustration which shows each metro stop as a circle and each metro line with a different color.
 include_graphics("img/la-metro.jpg")
 ```
 
@@ -229,6 +239,7 @@ Data representations can be used for exploratory reasons and explanatory reasons
 ```{r}
 #| fig-align: center
 #| out-width: 100%
+#| fig-alt: The title of the plot reads "if Bush tax cuts expire" It is a bar plot the first bar is labeled as now at 35% the next bar is labeled as Jan 1, 2013 labeled at 39.6% The y axis starts at 34%.
 include_graphics("img/fox.png")
 ```
 
@@ -239,6 +250,7 @@ include_graphics("img/fox.png")
 ```{r}
 #| fig-align: center
 #| out-width: 50%
+#| fig-alt: Same as the previous graph accept that the y axis goes from 0 to 40% and thus the bars don't seem that different from one another.
 include_graphics("img/fox-corrected.png")
 ```
 
@@ -262,6 +274,7 @@ Whenever possible start the axis at zero.
 ```{r}
 #| fig-align: center
 #| out-width: 50%
+#| fig-alt: three plots with same data. The x-axis always has year and the y-axis always has life expectancy. The plots are labeled as aspect ration 1:2, aspect ration 1:1, and aspect ration 2:1. In the first plot the x axis is double the y axis. In the third plot the y axis is double that of x axis. Thus in the first plot the trend can be perceived to have a low positive slope where as in the third plot the trend seems like a steeper positive change. 
 include_graphics("img/aspect-ratio.png")
 ```
 
@@ -279,6 +292,7 @@ include_graphics("img/aspect-ratio.png")
 ```{r}
 #| fig-align: center
 #| out-width: 50%
+#| fig-alt: The title reads "Estimated share of children with blood levels at or above 5 micrograms per deciliter. Each country is shown as a circle on the plot scattered around with y axis labeled as going from higher rates of elevated lead levels around 100% to lower rates of elevated lead levels going all the way down to zero percent. Each circle has a different color which represents the region such as Africa, Asia, Europe, Middle East, North America, Ocenia, and South America."
 include_graphics("img/nyt-lead-poisoning.png")
 ```
 
@@ -292,6 +306,7 @@ include_graphics("img/nyt-lead-poisoning.png")
 ```{r}
 #| fig-align: center
 #| out-width: 50%
+#| fig-alt: The title of the plot reads "Local news is now an endangered species in much of the United States. The plot shows county level US map, each county is colored with the legent ranging from none (shown in red) to 10+ news outlets (shown in green)"
 include_graphics("img/nyt-map.png")
 ```
 
@@ -305,6 +320,7 @@ include_graphics("img/nyt-map.png")
 ```{r}
 #| fig-align: center
 #| out-width: 50%
+#| fig-alt: The title of the plot states warmth in the Gulf of Mexico. On the x axis we see months, on the Y axis we see values ranging from 0 to 80 kJ/cm^2. We are also provided a text "This chart shows a measure of ocean heat content expressed by kilojoules per square centimeter". There are many gray curves each representing an individual year, and a dotted curve for showing average 2012-2023. These curves seem to pick between Aug-Oct. There is one curve that is red and has a specific point labeled as Oct 7, 2024. This curve seems above the dotted curve.
 include_graphics("img/nyt-emphasis.png")
 ```
 
@@ -317,6 +333,7 @@ include_graphics("img/nyt-emphasis.png")
 
 ```{r}
 #| fig-align: center
+#| fig-alt: The Hue bar (top) shows the full range of color hues mapped to degrees from 0° to 360°, wrapping around the color wheel—starting at red, through yellow, green, blue, magenta, and back to red. The Saturation bar (middle) shows how "intense" or "pure" the color is, going from 0% (completely desaturated, i.e., grayscale) to 100% (fully saturated, pure color). The Lightness/Brightness bar (bottom) shows how light or dark the color is, from 0% (black) to 100% (white), with the pure color appearing in the middle when lightness is 50%.
 include_graphics("https://giggster.com/guide/static/fed42130c194b0c240a4ec10408adf97/8282f/hsl-cover-2.png")
 ```
 
@@ -359,6 +376,7 @@ include_graphics("https://giggster.com/guide/static/fed42130c194b0c240a4ec10408a
 
 ```{r}
 #| fig-align: center
+#| fig-alt: a food packaging that reads as key lime tarts but the font used makes the letters t in the words tarts seem like an f instead.
 include_graphics("img/tarts.jpeg")
 ```
 
@@ -371,6 +389,7 @@ include_graphics("img/tarts.jpeg")
 
 ```{r}
 #| fig-align: center
+#| fig-alt: Two postit note both of which say please be mine. The left note is written with a curvy almost cursive font. The right note is written with a font that looks like blood is dripping.
 include_graphics("img/fonts-matter.png")
 ```
 
@@ -386,6 +405,7 @@ include_graphics("img/fonts-matter.png")
 
 ```{r}
 #| fig-align: center
+#| fig-alt: Comparison of four numeric styles Tabular Lining, Proportional Lining, Tabular Oldstyle, and Proportional Oldstyle. Each style displays the number '1984'. Tabular styles align numbers to equal widths; proportional styles use variable widths. Lining styles have uniform height; oldstyle styles use varying heights with some digits extending above or below the baseline.
 include_graphics("img/number-styles.png")
 ```
 :::{.imagelink}
@@ -418,6 +438,7 @@ The following example is from one of my favorite data visualization experts [Car
 
 ```{r}
 #| fig-align: center
+#| fig-alt: Table showing a study on odontoblast length (cells responsible for tooth growth) based on type and dose of supplement. The table compares Ascorbic Acid (Vitamin C) and Orange Juice at three doses 0.5 mg, 1 mg, and 2 mg. Each cell in the table contains rows of guinea pig face icons representing individual subjects in each condition.
 knitr::include_graphics("img/tooth-growth.png")
 ```
 
@@ -425,6 +446,7 @@ knitr::include_graphics("img/tooth-growth.png")
 ##
 
 ```{r}
+#| fig-alt: This is a bar plot with x axis labeled as 0.5, 1, and 2 for each bar. Within each bar we see two colors red and blue. In the legend the supp variable is defined with red as OJ and blue as VC. The y-axis shows mean-length.
 initial_plot <- ToothGrowth |>
   group_by(supp, dose) |>
   summarise(mean_length = mean(len)) |>
@@ -439,6 +461,7 @@ initial_plot
 ## 
 
 ```{r}
+#| fig-alt: this plot is a dodged barplot where the OJ and VC supp is shown next to each other as separate bars.
 ToothGrowth |>
   group_by(supp, dose) |>
   summarise(mean_length = mean(len)) |>
@@ -452,6 +475,7 @@ ToothGrowth |>
 ##
 
 ```{r}
+#| fig-alt: that bars get a white outline
 ToothGrowth |>
   group_by(supp, dose) |>
   summarise(mean_length = mean(len)) |>
@@ -467,6 +491,7 @@ ToothGrowth |>
 ##
 
 ```{r}
+#| fig-alt: the legend text changes to supplement, Orange Juice, and Vitamin C
 ToothGrowth |>
   mutate(supplement = 
            case_when(supp == "OJ" ~ "Orange Juice",
@@ -486,6 +511,7 @@ ToothGrowth |>
 ##
 
 ```{r}
+#| fig-alt: the gray background is replace with a white one
 ToothGrowth |>
   mutate(supplement = 
            case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
@@ -505,6 +531,7 @@ ToothGrowth |>
 ##
 
 ```{r}
+#| fig-alt: the x axis is now labeled as categorical_dose and there is no value of 1.5 which was initially a gap between dose 1 and dose 2 bars.
 ToothGrowth |>
   mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
   group_by(supplement, dose) |>
@@ -523,6 +550,7 @@ ToothGrowth |>
 ##
 
 ```{r}
+#| fig-alt: the orange juice and vitamin c is separated into two facets with orange juice on top as a separate bar plot.
 ToothGrowth |>
   mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
   group_by(supplement, dose) |>
@@ -541,6 +569,7 @@ ToothGrowth |>
 ##
 
 ```{r}
+#| fig-alt: There is a title that reads "In smaller doses, Orange Juice was associated with greater mean tooth growth, compared to equivalent doses of Vitamin C" and a subtitle that reads "With the highest dose, the mean recorded length was almost identical." 
 ToothGrowth |>
   mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
   group_by(supplement, dose) |>
@@ -564,7 +593,7 @@ subtitle = "With the highest dose, the mean recorded length was almost identical
 ##
 
 ```{r}
-
+#| fig-alt: Vitamin C bars are now shown with reddish orange color and orange juice is shown with a yellowish orange color.
 vit_c_palette <- c("Orange Juice" = "#fab909", 
                    "Vitamin C" = "#E93603",
                    light_text = "#323A30",
@@ -598,6 +627,7 @@ subtitle = "With the highest dose, the mean recorded length was almost identical
 ##
 
 ```{r}
+#| fig-alt: dose is introduced to legend with lower-to high dose ranging in light to dark. This change is reflected in the colors of the bars too.
 ToothGrowth |>
   mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
   group_by(supplement, dose) |>
@@ -625,6 +655,7 @@ subtitle = "With the highest dose, the mean recorded length was almost identical
 ##
 
 ```{r}
+#| fig-alt: legend is removed
 ToothGrowth |>
   mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
   group_by(supplement, dose) |>
@@ -653,6 +684,7 @@ subtitle = "With the highest dose, the mean recorded length was almost identical
 ##
 
 ```{r}
+#| fig-alt: x and y axis are flipped
 basic_plot <- ToothGrowth |>
   mutate(supplement = case_when(supp == "OJ" ~ "Orange Juice", supp == "VC" ~ "Vitamin C", TRUE ~ as.character(supp))) |>
   group_by(supplement, dose) |>
@@ -684,6 +716,7 @@ basic_plot
 ##
 
 ```{r}
+#| fig-alt: title is bolded, fonts have changed.
 basic_plot +
   theme(legend.position = "none",
         text = element_text(colour = vit_c_palette["light_text"],
@@ -700,6 +733,7 @@ basic_plot +
 ##
 
 ```{r}
+#| fig-alt: white space is added between subtitle and the plots
 basic_plot +
   theme(legend.position = "none",
         text = element_text(colour = vit_c_palette["light_text"], 
@@ -722,6 +756,7 @@ basic_plot +
 ##
 
 ```{r}
+#| fig-alt: the y-axis label is removed.
 basic_plot +
   theme(legend.position = "none",
         text = element_text(colour = vit_c_palette["light_text"], 
@@ -745,6 +780,7 @@ basic_plot +
 ##
 
 ```{r}
+#| fig-alt: reduced the line spacing of two lines of the title
 basic_plot +
   labs(title = "In smaller doses, Orange Juice was associated with greater mean tooth growth, compared to equivalent doses of Vitamin C") +
   theme(legend.position = "none",
@@ -772,6 +808,7 @@ basic_plot +
 ##
 
 ```{r}
+#| fig-alt: the words orange juice and vitamin c in the title match the corresponding colors of the bars.
 final_plot <- basic_plot +
   labs(title = 
          paste0("In smaller doses, **<span style='color:",
@@ -809,6 +846,7 @@ final_plot
 
 ```{r}
 #| fig-align: center
+#| fig-alt: The toothgrowth figure with the initial software defaults
 initial_plot
 ```
 
@@ -818,6 +856,7 @@ initial_plot
 
 ```{r}
 #| fig-align: center
+#| fig-alt: The toothgrowth figure after all the desired changes
 final_plot
 ```
 
@@ -902,6 +941,7 @@ In the [Bayes Rules!](https://www.bayesrulesbook.com/chapter-10) book, authors r
 ```{r}
 #| fig-align: center
 #| fig-cap: Since you are not a cat, for Datathon think outside the box PLEASE
+#| fig-alt: New Yorker style cartoon where a man is looking at a cat next to a litter box. The text reads "Never, ever, think outside the box"
 include_graphics("img/box.png")
 ```
 
